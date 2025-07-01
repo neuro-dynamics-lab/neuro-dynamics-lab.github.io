@@ -1,32 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Members</title>
+  <title>Members | Neurodynamics Laboratory</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .member-profile {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 40px;
+      align-items: flex-start;
+    }
+
+    .member-photo {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .member-text {
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
+<aside>
+  <nav>
+    <ul>
+      <li><a href="index_en.html">Home</a></li>
+      <li><a href="members_en.html">Members</a></li>
+      <li><a href="research_en.html">Research</a></li>
+      <li><a href="project_en.html">Project</a></li>
+      <li><a href="publications_en.html">Publications</a></li>
+      <li><a href="join_the_lab_en.html">Join the lab</a></li>
+      <li><a href="news_en.html">News</a></li>
+    </ul>
+  </nav>
+  <div class="language-switch">
+    <a href="members.html">日本語</a> | <a href="members_en.html">English</a>
+  </div>
+</aside>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="members.html">Members</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="news.html">News</a>
-  <span class="language-switch">
-    <a href="index.html">日本語</a> | <a href="index_en.html">English</a>
-  </span>
-</nav>
+<main>
+  <div class="content">
+    <section id="members">
+      <h2>Faculty</h2>
 
-<h1>Members</h1>
+      <div class="member-profile">
+        <img src="images/tokuda.jpg" alt="Keita Tokuda" class="member-photo">
+        <div class="member-text">
+          <h3>Keita Tokuda, Ph.D.</h3>
+          <p>Associate Professor</p>
+          <p>Degrees: Ph.D. (Information Science and Technology), M.S. (Pharmaceutical Sciences)</p>
+          <p>Main research topic: Mathematical modeling of the nervous system</p>
+          <p>Academic societies: The Japan Neuroscience Society, The Physical Society of Japan, The Japanese Society for Artificial Intelligence, The Japanese Neural Network Society, Society for Neuroscience (SfN)</p>
+          <p>Place of origin: Suginami-ku, Tokyo</p>
+          <p>He studied up to a master’s degree at the University of Tokyo, Faculty of Pharmaceutical Sciences, and conducted research on learning and memory using electrophysiological and behavioral neuroscience methods. During his master’s studies, he became interested in using mathematics in biological research and shifted to mathematical modeling of the brain from the doctoral stage. He served as a research fellow in the FIRST Aihara Advanced Mathematical Sciences Project at the Institute of Industrial Science, University of Tokyo; as a researcher and assistant professor in the Department of Pharmacy at the University of Tokyo Hospital; and as an assistant professor in the Faculty of Engineering, Information and Systems at the University of Tsukuba before assuming his current position. He is working to clarify the physiology and pathology of the central nervous system using mathematical methods such as dynamical systems and machine learning.</p>
+          <p>He also holds concurrent positions as a Collaborative Researcher at the International Research Center for Neurointelligence (IRCN), The University of Tokyo, and a Collaborating Researcher at the Beyond AI Institute, The University of Tokyo.</p>
+        </div>
+      </div>
 
-<h2>Keita Tokuda, Ph.D.</h2>
-<p>Associate Professor</p>
-<p>Conducting research on the physiology and pathology of the central nervous system using mathematical modeling, nonlinear dynamics, and machine learning.</p>
+      <div class="member-profile">
+        <img src="images/mitsui_jtd.jpg" alt="Takahito Mitsui" class="member-photo">
+        <div class="member-text">
+          <h3>Takahito Mitsui, Ph.D.</h3>
+          <p>Assistant Professor</p>
+          <p>Conducting research on climate change and weather control at Juntendo University.</p>
+          <ul>
+            <li>Climate modeling using Earth system models</li>
+            <li>Statistical modeling of paleoclimate records using data assimilation methods such as nonlinear Kalman filters</li>
+            <li>Time series prediction using reservoir computing</li>
+            <li>Dynamical systems analysis of simple climate models</li>
+          </ul>
+          <p>Research topics:</p>
+          <ul>
+            <li>Glacial–interglacial cycles (40,000–100,000-year cycles)</li>
+            <li>Dansgaard–Oeschger cycles</li>
+            <li>The current interglacial period and its future</li>
+            <li>Indian summer monsoon</li>
+          </ul>
+          <p>Also engaged in research on the control of extreme weather under the Kotsuki Project for Moonshot Goal 8.</p>
+        </div>
+      </div>
 
-<h2>Takahito Mitsui, Dr.Sc.</h2>
-<p>Assistant Professor</p>
-<p>Working on nonlinear dynamics and climate systems through statistical and machine learning-based time-series analysis and modeling.</p>
+      <h2>Doctoral Students</h2>
+      <h3>Mr./Ms. O</h3>
+      <p>Data Science Program, Graduate School of Medicine, Juntendo University</p>
+
+      <h3>Mr./Ms. J</h3>
+      <p>Ph.D. Program in Humanics, University of Tsukuba</p>
+
+      <h2>Research Assistants</h2>
+
+      <h3>Mr./Ms. Y</h3>
+
+    </section>
+  </div>
+
+  <footer>© 2025 Neurodynamics Lab, Juntendo University</footer>
+</main>
 </body>
 </html>
