@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Cerebellar Computation | Neurodynamics Laboratory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside>
+  <nav>
+    <ul>
+      <li><a href="index_en.html">Home</a></li>
+      <li><a href="members_en.html">Members</a></li>
+      <li><a href="research_en.html">Research</a></li>
+      <li><a href="project_en.html">Project</a></li>
+      <li><a href="publications_en.html">Publications</a></li>
+      <li><a href="join_the_lab_en.html">Join the lab</a></li>
+      <li><a href="news_en.html">News</a></li>
+    </ul>
+  </nav>
+  <div class="language-switch">
+    <a href="research_item_chaos-may-enhance-expressivity-in-cerebellar-granular-layer.html">日本語</a> | <a href="research_item_chaos-may-enhance-expressivity-in-cerebellar-granular-layer_en.html">English</a>
+  </div>
+</aside>
+<main>
+  <div class="content">
+    <section id="research">
+ <h2>Chaos may enhance expressivity in cerebellar granular layer</h2>
+<p><strong>Authors:</strong> Keita Tokuda, Naoya Fujiwara, Akihito Sudo, Yuichi Katori<br>
+<strong>Published in:</strong> Neural Networks, Vol. 136, pp. 72–86 (2021)<br>
+<strong>Award:</strong> 2022 Japanese Neural Network Society (JNNS) Best Paper Award</p>
+
+<p>
+This study proposes a hypothesis that <em>chaotic dynamics</em> may enhance the expressivity of information representation in the cerebellar granular layer. The granular layer, which receives mossy fiber inputs from precerebellar nuclei such as the pontine nucleus, functions as the input stage of the cerebellum. In humans, this layer contains tens of billions of granule cells — accounting for the vast majority of neurons in the brain — and has long been considered a key site for neural computation.
+</p>
+
+<p>
+The cerebellum is known to play a critical role in generating precisely timed movements. Studies using cerebellum-dependent learning paradigms, such as classical eyeblink conditioning, have revealed that the cerebellum produces specific motor outputs with accurate temporal relationships to sensory stimuli<sup>1)</sup>. It has been suggested that granule cells contribute to this function by exhibiting activity patterns that reflect the elapsed time after an input stimulus. In other words, different subsets of granule cells become active at specific delays following a sensory input, thereby representing the passage of time.
+</p>
+
+<p>
+This temporal encoding has been modeled as emerging from the recurrent interactions between excitatory granule cells and inhibitory Golgi cells, which form a feedback network. Such recurrent architectures have been theorized to generate nonlinear dynamics that produce time-dependent firing patterns<sup>2)</sup>. Building on this view, Yamazaki and Tanaka proposed that the cerebellum could be understood as a <em>liquid state machine</em> — a form of reservoir computing network capable of rich temporal processing<sup>3)</sup>.
+</p>
+
+<p>
+The idea for this study was inspired by the work of Vervaeke et al., who demonstrated that Golgi cells in the cerebellar granular layer are densely interconnected via gap junctions. Surprisingly, rather than promoting synchronization, these electrical connections can induce <em>desynchronization</em> between neighboring cells<sup>4)</sup>. This finding recalled earlier theoretical studies by Tsuda and colleagues, who showed that gap-junction coupling can give rise to <em>chaotic dynamics</em> in neural systems<sup>5)</sup>.
+</p>
+<figure>
+  <img src="images/NN2021_fig2.jpg" alt="Chaotic dynamics induced by gap junctions in a simple cerebellar reservoir model" class="member-photo" width="500">
+  <figcaption>
+    Fig. 2 reproduced from Tokuda et al., <em>Neural Networks</em>, 136, 72–86 (2021), 
+    © Tokuda et al. 2021. Licensed under 
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. 
+    The chaotic dynamics induced by gap junctions in the simple reservoir consist of a one-dimensional chain (Eqs. (1)–(3), Fig. 1(a)).
+    (a) The dynamics of the model with a small positive tonic input.
+    The colormap shows the dynamics of the membrane potentials.
+        (b–c) A Sierpinski gasket appears under small tonic inhibition.
+    The number of neurons is <em>N = 100</em> in (b) and <em>N<sub>go</sub> = 1000</em> in (c).
+    (d) The time evolution of the membrane potentials of the 50th neuron in (a).
+    (e) Periodic activity of an isolated μ-model neuron under a small positive tonic input.
+    (f) Broad distribution of the ISI of a neuron in chaotic dynamics. Data of the 50th neuron in (a) for 
+    <em>1 × 10<sup>3</sup></em> seconds is shown. The bin width is 1 ms.
+  </figcaption>
+</figure>
+
+<p>
+Motivated by these insights, we developed a computational model of the cerebellar granular layer in which Golgi cells interact through gap-junction-mediated coupling that induces chaos. Using the framework of reservoir computing, the model’s ability to generate time-specific activity patterns and diverse temporal outputs was quantitatively evaluated. The analysis revealed a strong relationship between the degree of chaos — measured by Lyapunov exponents and Lyapunov dimension — and the network’s expressive capacity. These results suggest that chaos may enhance the cerebellum’s computational power by expanding its ability to represent complex temporal information.
+</p>
+
+<figure>
+  <img src="images/NN2021_fig9.jpg" alt="Network showing walking and boxing patterns generated by the cerebellar model" class="member-photo" width="500">
+  <figcaption>
+    Fig. 9 reproduced from Tokuda et al., <em>Neural Networks</em>, 136, 72–86 (2021), 
+    © Tokuda et al. 2021. Licensed under 
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+    The network showing walking (a) and boxing (b) patterns for two different initial inputs.
+    The upper panels show the human motion generated by the model output visualized using a skeleton,
+    and the lower panels show the corresponding raw output signals of the model representing the angles of the bones.
+    Only a subset of representative traces is shown for simplicity.
+    The same readout connection matrix is used for both movements, walking and boxing.
+    The motion capture data from a human are learned.
+    Visualization was done using the MATLAB Motion Capture Toolbox 
+    (<a href="https://github.com/lawrennd/mocap" target="_blank">https://github.com/lawrennd/mocap</a>).
+  </figcaption>
+</figure>
+
+<h3>References</h3>
+<ol>
+  <li>Thompson R. F. (2005). In search of memory traces. <em>Annual Review of Psychology</em>, 56, 1–23.</li>
+  <li>Buonomano, D. V., & Mauk, M. (1994). Neural network model of the cerebellum: Temporal discrimination and the timing of motor responses. <em>Neural Computation</em>, 6(1), 38–55.</li>
+  <li>Yamazaki, T., & Tanaka, S. (2007). The cerebellum as a liquid state machine. <em>Neural Networks</em>, 20(3), 290–297.</li>
+  <li>Vervaeke, K., Lorincz, A., Gleeson, P., Farinella, M., Nusser, Z., & Silver, R. A. (2010). Rapid desynchronization of an electrically coupled interneuron network with sparse excitatory synaptic input. <em>Neuron</em>, 67(3), 435–451.</li>
+  <li>Tsuda, I., Fujii, H., Tadokoro, S., Yasuoka, T., & Yamaguti, Y. (2004). Chaotic itinerancy as a mechanism of irregular changes between synchronization and desynchronization in a neural network. <em>Journal of Integrative Neuroscience</em>, 3(2), 159–182.</li>
+</ol>
+
+
+<br><br>
+
+<br><br>
+
+
+
+    </section>
+  </div>
+  <footer>© 2025 Neurodynamics Lab, Juntendo University</footer>
+</main>
+</body>
+</html>
+
+
+
+
+
+
